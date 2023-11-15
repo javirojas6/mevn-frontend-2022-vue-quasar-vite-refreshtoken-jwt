@@ -14,12 +14,13 @@
         <q-toolbar-title>
           Quasar App
         </q-toolbar-title>
-        <q-btn color="purple" to="/" v-if="userStore.token">Inicio</q-btn>
-        <q-btn color="green" @click="accessUser" v-if="!userStore.token">Login</q-btn>
+        <q-btn  class="q-mr-sm" color="purple" to="/" v-if="userStore.token">Inicio</q-btn>
+        <q-btn class="q-mr-sm" color="green" @click="accessUser" v-if="!userStore.token">Login</q-btn>
+
         <q-btn class="q-mr-sm" color="brown" to="/register" v-if="!userStore.token">Register</q-btn>
-        <q-btn color="red" @click="logout" v-if="userStore.token">Logout</q-btn>
-        <q-btn color="orange" to="/protected" v-if="userStore.token">Protected</q-btn>
-        <q-btn color="orange" to="/about" v-if="userStore.token">About</q-btn>
+        <q-btn class="q-mr-sm" color="red" @click="logout" v-if="userStore.token">Logout</q-btn>
+        <q-btn class="q-mr-sm" color="orange" to="/protected" v-if="userStore.token">Protected</q-btn>
+        <q-btn class="q-mr-sm" color="orange" to="/about" v-if="userStore.token">About</q-btn>
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
