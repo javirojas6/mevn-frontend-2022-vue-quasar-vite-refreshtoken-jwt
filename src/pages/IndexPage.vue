@@ -6,11 +6,11 @@
     <!-- {{ userStore.token }} - {{ userStore.expiresIn }} -->
     <!-- <q-btn @click="useLink.createLink('https://google.cl')">Crear Link</q-btn> -->
   <AddLink />
-    <pre>
+    <!-- <pre>
       {{ useLink.links }}
-    </pre>
+    </pre> -->
     <template v-for="link in useLink.links" :key="link._id">
-      <LinkCard />
+      <LinkCard :link="link"/>
     </template>
   </q-page>
 </template>
